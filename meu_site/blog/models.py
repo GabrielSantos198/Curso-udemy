@@ -22,7 +22,7 @@ class Post(models.Model):
                               default='rascunho')
 
     def get_absolute_url(self):
-        return reverse('post_detail', args=[self.pk])
+        return reverse('post_detail', args=[self.slug])
 
     class Meta:
         ordering = ('-publicado',)
